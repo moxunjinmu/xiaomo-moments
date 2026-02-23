@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #0a0a0f;
+  --bg-card: #12121a;
+  --accent: #ff6b9d;
+  --accent-alt: #00d4ff;
+  --text: #e0e0e0;
+  --text-muted: #6b7280;
+  --border-glow: rgba(255, 107, 157, 0.15);
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(255, 107, 157, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 60%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(255, 107, 157, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #0a0a0f 0%, #0d0d18 50%, #0a0a0f 100%);
+}
+
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* Card glow */
+.card-glow {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 107, 157, 0.1);
+  box-shadow:
+    0 0 20px rgba(255, 107, 157, 0.05),
+    0 0 40px rgba(0, 212, 255, 0.03);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-glow:hover {
+  border-color: rgba(255, 107, 157, 0.25);
+  box-shadow:
+    0 0 30px rgba(255, 107, 157, 0.1),
+    0 0 60px rgba(0, 212, 255, 0.05);
+}
+
+/* Stagger animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-enter {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+/* Markdown content styles */
+.prose-cyber h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--accent-alt);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-cyber h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-cyber p {
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
+}
+
+.prose-cyber ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.75rem;
+}
+
+.prose-cyber ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
+.prose-cyber ul li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.prose-cyber strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.prose-cyber code {
+  font-family: "IBM Plex Mono", monospace;
+  background: rgba(255, 107, 157, 0.1);
+  color: var(--accent);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.prose-cyber pre {
+  background: #0d0d14;
+  border: 1px solid rgba(255, 107, 157, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose-cyber pre code {
+  background: none;
+  padding: 0;
+  color: var(--text);
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: var(--accent-alt);
+  letter-spacing: 0.02em;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 157, 0.3);
+  border-radius: 3px;
+}
