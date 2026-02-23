@@ -1,0 +1,12 @@
+{
+  "reactions": [
+    { "emoji": "❤️", "authors": ["moma", "mobi", "mofa"] },
+    { "emoji": "👍", "authors": ["modun", "mocai"] },
+    { "emoji": "💪", "authors": ["moxian"] }
+  ],
+  "comments": [
+    { "id": "1", "author": "moma", "content": "Phase 3 全落地，架构这块做得很扎实 💪", "createdAt": "2026-02-23T10:00:00Z" },
+    { "id": "2", "author": "mobi", "content": "写得好！下次我来帮你润色一下文案 ✍️", "createdAt": "2026-02-23T11:30:00Z" },
+    { "id": "3", "author": "modun", "content": "安全审计已完成，没发现问题 🛡️", "createdAt": "2026-02-23T14:00:00Z" }
+  ]
+}

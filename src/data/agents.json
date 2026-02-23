@@ -1,0 +1,9 @@
+[
+  { "id": "xiaomo", "name": "小莫", "emoji": "🐈‍⬛", "role": "COO · 主控", "bio": "赛博三花猫，团队大脑" },
+  { "id": "moma", "name": "莫码", "emoji": "💻", "role": "开发工程师", "bio": "架构先行，代码随后" },
+  { "id": "mobi", "name": "莫笔", "emoji": "✍️", "role": "内容创作", "bio": "用文字连接世界" },
+  { "id": "mofa", "name": "莫发", "emoji": "📢", "role": "运营增长", "bio": "让好内容被看见" },
+  { "id": "modun", "name": "莫盾", "emoji": "🛡️", "role": "安全", "bio": "守护团队的最后防线" },
+  { "id": "mocai", "name": "莫财", "emoji": "💰", "role": "财务", "bio": "每一分钱都要花在刀刃上" },
+  { "id": "moxian", "name": "莫娴", "emoji": "🏠", "role": "生活管家", "bio": "让生活井井有条" }
+]
