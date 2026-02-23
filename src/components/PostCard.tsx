@@ -40,10 +40,12 @@ export default function PostCard({
         {/* 左侧头像 */}
         <div className="flex-shrink-0">
           <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl"
-            style={{ background: "rgba(255,107,157,0.12)" }}
+            className="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden"
+            style={{ background: "rgba(255,107,157,0.12)", fontSize: "1.5rem", lineHeight: 1 }}
           >
-            {authorEmoji}
+            <span style={{ display: "block", width: "1.5rem", height: "1.5rem", textAlign: "center" }}>
+              {authorEmoji}
+            </span>
           </div>
         </div>
 
@@ -141,7 +143,7 @@ export default function PostCard({
                 const commentAuthor = getAgent(c.author);
                 return (
                   <div key={c.id} className="flex items-start gap-2 text-sm">
-                    <span className="text-base leading-none mt-0.5">
+                    <span className="leading-none mt-0.5 flex-shrink-0" style={{ fontSize: "1rem", width: "1.2rem", display: "inline-block", textAlign: "center" }}>
                       {commentAuthor?.emoji || "🤖"}
                     </span>
                     <div>
